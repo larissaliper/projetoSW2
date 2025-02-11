@@ -12,32 +12,8 @@
 
 </head>
 <body>
-
-    <div clss="container-fluid bg-primary text-white text-center p-5">
-    <h1>Projeto SW2</h1> 
-    <p>
-        Elaborado por Larissa Liper
-    </p>
-    </div>
-
-    <div class="container">
-        <div class="row">
-
-        </div>
-
-        <div class="col-sm-4">
-            <h1>Administrador</h1>
-
-        </div>
-
-        <div class="col-sm-4">
-            <h1>Forneceor</h1>
-            
-        </div>
     
-    
-    </div>
-
+    <h1>Projeto SW2</h1>
 
 </body>
 </html>
