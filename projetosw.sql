@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 25-Mar-2025 às 13:58
+-- Tempo de geração: 25-Mar-2025 às 13:48
 -- Versão do servidor: 8.0.31
 -- versão do PHP: 8.0.26
 
@@ -36,14 +36,16 @@ CREATE TABLE IF NOT EXISTS `administrador` (
   `login` varchar(200) NOT NULL,
   `senha` varchar(200) NOT NULL,
   PRIMARY KEY (`codigo`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Extraindo dados da tabela `administrador`
 --
 
 INSERT INTO `administrador` (`codigo`, `nome`, `login`, `senha`) VALUES
-(1, 'la', 'etec', '5fddd10608c2599b2c676144361d297f');
+(1, 'joao', 'etec', ''),
+(2, 'joao', 'etec', '5fddd10608c2599b2c676144361d297f'),
+(3, 'joao', 'etec', '5fddd10608c2599b2c676144361d297f');
 
 -- --------------------------------------------------------
 
@@ -67,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `categoria` (
 DROP TABLE IF EXISTS `fornecedor`;
 CREATE TABLE IF NOT EXISTS `fornecedor` (
   `codigo` int NOT NULL AUTO_INCREMENT,
-  `nome` int NOT NULL,
+  `nome` varchar(100) NOT NULL,
   PRIMARY KEY (`codigo`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 COMMIT;

@@ -11,7 +11,7 @@
 <body>
     
     <div class="bg-primary text-white p-3 text-center">
-        <h1>Cadastro de Administradores</h1>
+        <h1>Cadastro de Categorias</h1>
     </div>
 
     <div class="container">
@@ -24,24 +24,18 @@
                     <?php 
                        include "conexao.php";
 
-                        $nome = $_REQUEST["nome"];
-                        $login = $_REQUEST["login"];
-                        $senha = md5( $_REQUEST["senha"] );
+                        $nome = $_REQUEST["nomecategoria"];
 
-                        echo "Nome do Administrador: $nome <br>
-                                Login: $login <br>
-                                Senha: $senha <br>";
+                        echo "Nome da Categoria: $nome <br>";
 
-                        $sql = "insert into administrador(nome, login, senha)
-                                values (:nome, :login, :senha)";
+                        $sql = "insert into categoria(nome)
+                                values (:nome)";
 
-                        $result = $conexao->prepare("$sql");
+                        $result = $conexao->prepare($sql);
                         $result->bindValue(":nome", $nome);
-                        $result->bindValue(":login", $login);
-                        $result->bindValue(":senha", $senha);
                         $result->execute();
 
-                        echo "<p>O administrador foi cadastrado com sucesso!</p>"
+                        echo "<p>A categoria foi cadastrada com sucesso!</p>"
 
                     ?>
                

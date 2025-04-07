@@ -10,26 +10,26 @@
 </head>
 <body>
     
-    <div class="bg-success text-white p-3 text-center">
-        <h1>Cadastro de Fornecedores</h1>
+    <div class="bg-danger text-white p-3 text-center">
+        <h1>Cadastro de Categorias</h1>
     </div>
 
     <div class="container">
 
             <div class="row">
-                <div class="col-sm-8 mx-auto mt-3 border border-success">
+                <div class="col-sm-8 mx-auto mt-3 border border-danger">
                 <h3>Preencha os dados abaixo:</h3>
 
-                <form action="fornecedor_cadastro.php">
+                <form action="categoria_cadastro">
 
                     <p>
-                        Digite o nome do fornecedor<br>
-                        <input type="text" name="nomefornecedor" class="form-control">
+                        Digite o nome da categoria<br>
+                        <input type="text" name="nomecategoria" class="form-control">
                     </p>
 
                     <p>
-                        <input type="submit" value="Cadastrar" class="btn btn-success">
-                        <input type="reset" value="Limpar" class="btn btn-warning">
+                        <input type="submit" value="Cadastrar" class="btn btn-danger">
+                        <input type="reset" value="Limpar" class="btn btn-success">
                         <a href="#" class="btn btn-secondary">Voltar</a>
                     </p>
                 </form>
