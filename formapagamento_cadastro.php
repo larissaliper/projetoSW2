@@ -24,9 +24,9 @@
                     <?php 
                        include "conexao.php";
 
-                        $senha = md5( $_REQUEST["nomeformapagamento"] );
+                        $senha = $_REQUEST["nomeformapagamento"];
 
-                        echo "Forma de pagamento: $nome <br>
+                        echo "Forma de pagamento: $nome <br>;
                                 Nome: $nome <br>";
 
                         $sql = "insert into formapagamento(nome)
