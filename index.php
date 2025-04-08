@@ -70,6 +70,18 @@
                 <a href="#" class="btn btn-secondary">Clique</a>
                     </p>
         </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h1 class="bg-secondary">Forma de Pagamento</h1>
+                <p class="text-secondary">
+                    Use essa opção para escolher a forma de pagamento.
+                </p>
+                <p>
+                <a href="formapagamento.php" class="btn btn-secondary">Clique</a>
+                    </p>
+        </div>
+
     </div>
 </div>
 </body>

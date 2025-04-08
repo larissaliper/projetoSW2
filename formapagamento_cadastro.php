@@ -11,27 +11,35 @@
 <body>
     
     <div class="bg-primary text-white p-3 text-center">
-        <h1>Cadastro de Formas de Pagamento</h1>
+        <h1>Cadastro de Forma de Pagamento</h1>
     </div>
 
     <div class="container">
 
             <div class="row">
                 <div class="col-sm-8 mx-auto mt-3 border border-primary">
-                <h3>Preencha os dados abaixo:</h3>
+                <h3 class="text-center p-3">Confirmação do Pagamento</h3>
 
-                <form action="formapagamento_cadastro">
+                <div>
+                    <?php 
+                       include "conexao.php";
 
-                    <p>
-                        Digite o nome da Forma de Pagamento<br>
-                        <input type="text" name="nomeformapagamento" class="form-control">
-                    </p>
+                        $senha = md5( $_REQUEST["nomeformapagamento"] );
 
-                        <input type="submit" value="Cadastrar" class="btn btn-primary">
-                        <input type="reset" value="Limpar" class="btn btn-success">
-                        <a href="#" class="btn btn-secondary">Voltar</a>
-                    </p>
-                </form>
+                        echo "Forma de pagamento: $nome <br>
+                                Nome: $nome <br>";
+
+                        $sql = "insert into formapagamento(nome)
+                                values (:nome)";
+
+                        $result = $conexao->prepare("$sql");
+                        $result->bindValue(":nome", $nome);
+                        $result->execute();
+
+                        echo "<p>O pagamento foi feito com sucesso!</p>"
+
+                    ?>
+               
                 </div>
             </div>
     </div>

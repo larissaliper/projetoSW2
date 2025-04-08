@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 25-Mar-2025 às 13:48
+-- Tempo de geração: 08-Abr-2025 às 10:56
 -- Versão do servidor: 8.0.31
 -- versão do PHP: 8.0.26
 
@@ -57,6 +57,19 @@ DROP TABLE IF EXISTS `categoria`;
 CREATE TABLE IF NOT EXISTS `categoria` (
   `codigo` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) NOT NULL,
+  PRIMARY KEY (`codigo`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `formapagamento`
+--
+
+DROP TABLE IF EXISTS `formapagamento`;
+CREATE TABLE IF NOT EXISTS `formapagamento` (
+  `codigo` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(200) NOT NULL,
   PRIMARY KEY (`codigo`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
