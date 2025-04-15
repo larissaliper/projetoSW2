@@ -45,7 +45,8 @@
                     Utilize esta opção para cadastrar os fornecedores dos produtos que serão vendidos on-line.
                 </p>
                 <p>
-                <a href="fornecedor.php" class="btn btn-success">Clique</a>
+                <a href="fornecedor.php" class="btn btn-success">Cadastro</a>
+                <a href="administrador_pesquisa.php" class="bth-primary">Pesquisa</a>
                     </p>
             </div>
 
@@ -70,18 +71,15 @@
                 <a href="#" class="btn btn-secondary">Clique</a>
                     </p>
         </div>
-
-        <div class="row">
-            <div class="col-sm-6">
-                <h1 class="bg-secondary">Forma de Pagamento</h1>
-                <p class="text-secondary">
-                    Use essa opção para escolher a forma de pagamento.
+        <div class="col-sm-6">
+            <h1 class="bg-primary">Formas de Pagamento</h1>
+            <p class="text-primary">
+                    Use essa opção para cadastrar as formas de pagamentos.
                 </p>
                 <p>
-                <a href="formapagamento.php" class="btn btn-secondary">Clique</a>
+                <a href="formapagamento.php" class="btn btn-primary">Clique</a>
                     </p>
         </div>
-
     </div>
 </div>
 </body>

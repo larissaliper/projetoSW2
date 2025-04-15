@@ -18,15 +18,16 @@
 
             <div class="row">
                 <div class="col-sm-8 mx-auto mt-3 border border-primary">
-                <h3>Preencha os dados abaixo:</h3>
+                <h3>Preencha os dados abaixo</h3>
 
-                <form action="formapagamento_cadastro">
+                <form action="formapagamento_cadastro.php">
 
                     <p>
-                        Digite o nome da Forma de Pagamento<br>
-                        <input type="text" name="nomeformapagamento" class="form-control">
+                    Digite o nome da forma de pagamento:<br>
+                        <input type="text" name="nomeformadepagamento" class="form-control">
                     </p>
 
+                    <p>
                         <input type="submit" value="Cadastrar" class="btn btn-primary">
                         <input type="reset" value="Limpar" class="btn btn-success">
                         <a href="#" class="btn btn-secondary">Voltar</a>

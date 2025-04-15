@@ -11,32 +11,31 @@
 <body>
     
     <div class="bg-primary text-white p-3 text-center">
-        <h1>Cadastro de Forma de Pagamento</h1>
+        <h1>Cadastro de Formas de Pagamento</h1>
     </div>
 
     <div class="container">
 
             <div class="row">
                 <div class="col-sm-8 mx-auto mt-3 border border-primary">
-                <h3 class="text-center p-3">Confirmação do Pagamento</h3>
+                <h3 class="text-center p-3">Confirmação do Cadastro</h3>
 
                 <div>
                     <?php 
                        include "conexao.php";
 
-                        $senha = $_REQUEST["nomeformapagamento"];
+                        $nome = $_REQUEST["nomeformadepagamento"];
 
-                        echo "Forma de pagamento: $nome <br>;
-                                Nome: $nome <br>";
+                        echo "Nome do da Forma de Pagamento: $nome <br>";
 
                         $sql = "insert into formapagamento(nome)
                                 values (:nome)";
 
-                        $result = $conexao->prepare("$sql");
+                        $result = $conexao->prepare($sql);
                         $result->bindValue(":nome", $nome);
                         $result->execute();
 
-                        echo "<p>O pagamento foi feito com sucesso!</p>"
+                        echo "<p>A forma de pagamento foi cadastrada com sucesso!</p>"
 
                     ?>
                
