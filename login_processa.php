@@ -1,29 +1,32 @@
 <?php
- 
-    include "conexap.php";
+
+    include "conexao.php";
 
     $sql = "select * from administrador
-    where login = :login and senha = :senha";
+            where login = :login and senha = :senha";
 
-    $login - $_REQUET["login"];
-    $senha - $_REQUET["senha"];
+    $login = $_REQUEST["login"];
+    $senha = $_REQUEST["senha"];
 
     $result = $conexao->prepare($sql);
-    $resul->bindVale(":login", $login);
-    $resul->bindVale(":senha", $senha);
+    $result->bindValue(":login", $login);
+    $result->bindValue(":senha", md5($senha));
     $result->execute();
 
-    if ( $linha = $result >fetch(PDO::FETCH_ASSOC) )
+    if ( $linha = $result->fetch(PDO::FETCH_ASSOC) )
     {
-        echo "Login realixado com sucesso !";
+        //echo "Login realizado com sucesso!";
+        session_start();
+        $_SESSION["nome"] = $linha["nome"];
+
+        header("location: index.php");
     }
     else
     {
-       session_start();
-       $_SESSION["erro"] = "Login e Senha incorretos !";
+        session_start();
+        $_SESSION["erro"] = "Login e senha incorretos!";
 
-       header("location: login.php");
+        header("location: login.php");
     }
-
 
 ?>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Larissa</title>
+    <title>Document</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -12,7 +12,7 @@
     <div class="container-fluid bg-primary text-white text-center p-5">
         <h1>Projeto SW2</h1>
         <p>
-            Elaborado por Larissa Liper
+            Elaborado por João Gabriel da Silva Cruz
         </p>
     </div>
 
@@ -24,8 +24,9 @@
                 <p class="text-primary">
                     Utilize esta opção para realizar o cadastro de novos administradores, ou edita-los.
                 </p>
-                    <p>
-                <a href="administrador.php" class="btn btn-primary">Clique</a>
+                <p>
+                <a href="administrador.php" class="btn btn-primary">Cadastro</a>
+                <a href="administrador_pesquisa.php" class="btn btn-primary">Pesquisa</a>
                     </p>
             </div>
 
@@ -36,6 +37,8 @@
                 </p>
                 <p>
                 <a href="categoria.php" class="btn btn-danger">Clique</a>
+                <a href="categoria_pesquisa.php" class="btn btn-primary">Pesquisa</a>
+
                     </p>
             </div>
 
@@ -45,8 +48,9 @@
                     Utilize esta opção para cadastrar os fornecedores dos produtos que serão vendidos on-line.
                 </p>
                 <p>
-                <a href="fornecedor.php" class="btn btn-success">Cadastro</a>
-                <a href="administrador_pesquisa.php" class="bth-primary">Pesquisa</a>
+                <a href="fornecedor.php" class="btn btn-success">Clique</a>
+                <a href="fornecedor_pesquisa.php" class="btn btn-primary">Pesquisa</a>
+
                     </p>
             </div>
 
@@ -60,6 +64,8 @@
                 </p>
                 <p>
                 <a href="produto.php" class="btn btn-warning">Clique</a>
+                <a href="produto_pesquisa.php" class="btn btn-primary">Pesquisa</a>
+
                     </p>
         </div>
         <div class="col-sm-6">

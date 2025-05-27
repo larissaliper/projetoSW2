@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 08-Abr-2025 às 10:56
+-- Tempo de geração: 27-Maio-2025 às 11:47
 -- Versão do servidor: 8.0.31
 -- versão do PHP: 8.0.26
 
@@ -58,7 +58,18 @@ CREATE TABLE IF NOT EXISTS `categoria` (
   `codigo` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) NOT NULL,
   PRIMARY KEY (`codigo`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Extraindo dados da tabela `categoria`
+--
+
+INSERT INTO `categoria` (`codigo`, `nome`) VALUES
+(1, 'we'),
+(2, 'we'),
+(3, 'we'),
+(4, 'we'),
+(5, 'we');
 
 -- --------------------------------------------------------
 
@@ -69,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `categoria` (
 DROP TABLE IF EXISTS `formapagamento`;
 CREATE TABLE IF NOT EXISTS `formapagamento` (
   `codigo` int NOT NULL AUTO_INCREMENT,
-  `nome` varchar(200) NOT NULL,
+  `nome` varchar(100) NOT NULL,
   PRIMARY KEY (`codigo`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -83,6 +94,33 @@ DROP TABLE IF EXISTS `fornecedor`;
 CREATE TABLE IF NOT EXISTS `fornecedor` (
   `codigo` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) NOT NULL,
+  PRIMARY KEY (`codigo`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Extraindo dados da tabela `fornecedor`
+--
+
+INSERT INTO `fornecedor` (`codigo`, `nome`) VALUES
+(1, 'dqdw');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `produto`
+--
+
+DROP TABLE IF EXISTS `produto`;
+CREATE TABLE IF NOT EXISTS `produto` (
+  `codigo` int NOT NULL AUTO_INCREMENT,
+  `descricao` varchar(200) NOT NULL,
+  `precocusto` float(10,2) NOT NULL,
+  `precovenda` float(10,2) NOT NULL,
+  `codcategoria` int NOT NULL,
+  `codfornecedor` int NOT NULL,
+  `imagem1` varchar(200) NOT NULL,
+  `imagem2` varchar(200) NOT NULL,
+  `imagem3` varchar(200) NOT NULL,
   PRIMARY KEY (`codigo`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 COMMIT;
